@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <form class="" action="/login" method="post">
+    <h1>Log In</h1>
+    <input type="email" name="email" value="" placeholder="Email">
+    <input type="password" name="password" value="" placeholder="Password">
+    <button type="submit" name="loginBtn">Log In</button>
+  </form>
+
+  <form class="" action="/register" method="post">
+    <h1>Register</h1>
+    <input type="text" name="name" value="" placeholder="Name" required>
+    <input type="email" name="email" value="" placeholder="Email" required>
+    <input type="password" id="password" name="password" value="" placeholder="Password" required>
+    <input type="password" value="" placeholder="Confirm Password" oninput="check(this)" required>
+    <script language='javascript' type='text/javascript'>
+      function check(input) {
+        if (input.value != document.getElementById('password').value) {
+          input.setCustomValidity('Password Must be Matching.');
+        } else {
+          input.setCustomValidity('');
+        }
+      }
+    </script>
+    <button type="submit" name="button">Register</button>
+  </form>
+</body>
+
+</html>

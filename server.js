@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // setup ejs
 app.set('view engine', 'ejs');
 
+require('./config/sessions.js')(app);
 require("./config/routes.js")(app);
 
 app.listen(port, function() {

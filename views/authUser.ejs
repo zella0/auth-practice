@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="col">
+        <h1>Welcome <%= user.name %></h1>
+        <p>You have a total of <%= user.points %> points</p>
+      </div>
+      <div class="col">
+        <a href="/logout">log out</a>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <% for(let i = 0; i < quests.length; i++){ %>
+        <div class="col">
+          <h2><%= quests[i].name %></h2>
+          <p>Earns between <%= quests[i].lowest_xp %> to <%= quests[i].highest_xp %> points</p>
+          <a href="/quest/<%= quests[i].id %>">Do Quest</a>
+        </div>
+      <% } %>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+
+      </div>
+    </div> -->
+  </body>
+</html>
